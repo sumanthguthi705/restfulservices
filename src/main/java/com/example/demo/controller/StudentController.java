@@ -36,6 +36,12 @@ public class StudentController {
 		return sjp.findAll();
 	}
 
+	@GetMapping("/welcome")
+	public String welcome()
+	{
+		return "Welcome to Student Management System";
+	}
+
 	@GetMapping(path="/student/{id}")
 	public Optional<Student> getStudentsByID(@PathVariable int id)
 	{

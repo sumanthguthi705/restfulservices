@@ -2,17 +2,13 @@ package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.boot.autoconfigure.*;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@ComponentScan({ "com.example.demo.*" })
-@EnableJpaRepositories
+@EnableDiscoveryClient
 public class RestfulservicesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestfulservicesApplication.class, args);
 	}
-
 }
